@@ -1,0 +1,239 @@
+% resume.tex
+%
+% (c) 2002 Matthew M. Boedicker <mboedick@mboedick.org> http://mboedick.org
+% $Id: resume.tex,v 1.7 2004/02/02 14:21:06 mboedick Exp $
+%
+\documentclass[10pt]{article}
+\usepackage{fullpage}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+%\usepackage{arev}
+\usepackage[T1]{fontenc}
+%\usepackage[scaled]{tapir}
+\renewcommand*\familydefault{\sfdefault} %% Only if the base font of the document is to be sans serif
+\usepackage{lmodern}
+\usepackage[pdftex]{graphicx}
+\usepackage{wrapfig}
+\usepackage{tikz}
+\usepackage{tabularx}
+\usepackage{helvet}
+
+\hypersetup{
+    colorlinks,%
+    citecolor=black,%
+    filecolor=blue,%
+    linkcolor=black,%
+    urlcolor=black
+}
+\textheight=9.0in
+\pagestyle{empty}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+\lhead {}
+\rhead {}
+\chead{}
+
+
+\rfoot[\fancyplain{\tstamp} {\tstamp}]  {\fancyplain{}{... turn over.}}
+\def\bull{\vrule height 0.7ex width .7ex depth -.1ex }
+
+\newcommand{\lineunder}{\vspace*{-10pt} \\ \hspace*{-18pt} \hrulefill \vspace{2pt}\\}
+
+\newcommand{\header}[1]{{\hspace*{-15pt}\vspace*{-0pt}\\ \uppercase{\textbf {#1}}}  \lineunder}
+
+\newcommand{\employer}[4]{ 
+        \vspace*{6pt}
+	\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+	\textbf{#1} & #2 \\
+                #3  & #4 \\ 
+	\end{tabular*}
+	%{\underline{\textbf{\emph{#3}}}\\  }
+}
+
+\newenvironment{achievements}{
+        \vspace{-0pt}
+        \begin{list}
+        {}
+        {\topsep 0pt \itemsep -3pt}
+}
+{
+        \end{list}
+}
+
+\newcommand{\contact}[4]{
+\vspace*{-19pt}
+\begin{flushleft}
+{\hspace*{-15pt} \LARGE \scshape \scshape {#1}}\\
+#2\\
+#3
+\newline
+\lineunder
+\end{flushleft}
+}
+
+
+
+
+
+\begin{document}
+%\begin{wrapfigure}{r}[0pt]{0.17\textwidth}
+%\begin{flushright}
+%\vspace*{-50pt}
+%\includegraphics[scale=0.11]{photo.jpeg}
+%\vspace*{-11pt}
+%\end{flushright}
+%\end{wrapfigure}
+
+\contact{Steven Joseph}
+{+919769393592  $\bullet$ \href{mailto:steven@stevenjoseph.in}{steven@stevenjoseph.in} $\bullet$  \href{http://stevenjoseph.in}{http://stevenjoseph.in}}
+{5/18 Haninsworth St, Westmead 2145, Sydney, Australia.} 
+%{Current Address: 601/EMP2, Evershine Millineum Paradise, Kandivli (E), Mumbai, Maharashtra, India, 400-066.} 
+%{Permanent Address: 181, Street 3c, Hill Gardens, Trichur, Kerala, India, 680-014. }
+%\vspace*{-12pt}
+
+\begin{tabularx}{\linewidth}{Xr}
+Date of Birth: March 12th, 1983 & Marital status: Married\\
+\end{tabularx}
+
+\header{Career Objective}
+To attain a high level of experience and knowledge in software development, and to be actively involved in the development of advanced ubiquitous computer systems. 
+I aim to work on the cutting edge of computer technology and innovation, where science meets science fiction.
+
+\header{Profile}
+Software Engineer with a Masters Degree in Computer Science, and more than four years experience developing software.
+Experienced in planing, designing and developing Web Applications and Client-Server applications.
+Passionate about programming and efficiently delivering quality applications with agility.
+%Experience programming in Python Javaand C\#, familiar with software development processes and methods, SCM, Test Driven Development and OpenUp. 
+%Pragmatic programmer with a master's degree in computer science, searching for a progammer position at an internationally oriented organization.  
+%He has more than two years experience developing software.
+\vspace{5pt}
+%----------------------------------------------SKILLS-----------------------------------------------------------------
+\header{Technical Skills}
+\begin{tabular*}{\textwidth}{p{3cm}p{.83\textwidth}}
+    Python: & Web Application Development using python based frameworks like Tornado, Django, Twisted, Jinja.  \\
+    DevOps: & Experience configuring services, like nginx, LAMP (Python), Trac, gitosis, CouchDb, eJabberd, on Debian, ArchLinux. \\
+    JavaScript: & Worked on the awesome dojo javascript framework. \\
+    HTML/CSS: & Experience developing universal web applications, familiar with accessibility features, used Compass/SASS css metaframework. \\
+    Java SE: & Experience developing a low latency, highly available, scalable instant messaging client/server applications and UI development using swing ui toolkit. \\
+    C\# : & Experience gained during employment, through research \& development of \href{http://en.wikipedia.org/wiki/FIX_protocol}{FIX protocol} trading gateway servers using Mono C\#. \\
+    Processes: & Agile, Scrum, XP, \href{http://en.wikipedia.org/wiki/Unified\_process}{RUP/OpenUp}. \\
+    Other: & Git (SCM), \LaTeX, bash, zsh.\\
+    %\LaTeX & Comfortable using \LaTeX to maintain documents and process artifacts. \\
+\end{tabular*}
+
+%-----------------------------------------------WORK HISTORY----------------------------------------------------
+\header{Professional Experience}
+\employer{\href{http://www.pfhit.com/}{Pioneer FutureTech Healthcare IT Pvt Ltd.}}{December 2010 - Present}{\emph{Tech Director}} {JVLPD, Juhu, Mumbai, India}
+	\begin{achievements}
+                \item[-] Directed the development of an innovative new system for managing medical records on the cloud.
+                \item[-] Applied agile tatics, and continuous testing to deliver an high quality web application in constrained timelines and resources.
+                \item[-] Web Application development using Python, Dojo, HTML, CSS, CouchDB. Handled DevOps.
+	\end{achievements}
+\employer{\href{http://www.Tickerplantindia.com/}{TickerPlant Ltd.}}{December 2009 - Present}{\emph{Senior Software Engineer}} {Andheri, Mumbai, India}
+	\begin{achievements}
+                \item[-] Developed a real-time collaboration suite, providing an instant messaging client applet, a high performance real-time async server, and an administrative utility for monitoring and moderation. Implemented using Java SE with Ms SQL server data storage.
+                \item[-] Used OpenUp Software development process, to manage the development process.
+	\end{achievements}
+\employer{\href{http://www.InfinitelyBeta.com/}{InfinitelyBeta Ltd.}}{June 2009 - Sept 2009}{\emph{Web Programmer}} {Malad, Mumbai, India}
+	\begin{achievements}
+                \item[-] Implemented 3rd party authentication techniques using OpenId, Facebook, and OAuth, on Django web framework.
+                \item[-] Worked on a social networked web application in Python using the Django web framework.
+                %\item[-] Tailored an lightweight development process for web application development.
+	\end{achievements}
+\employer{\href{http://www.ftindia.com/}{Financial Technologies (India) Ltd.}}{Jan 2006 - Sept 2007}{\emph{Software Engineer}} {Andheri, Mumbai, India}
+	\begin{achievements}
+                \item[-] Worked on the design and development of an n-tier, multi protocol, distributed, order validating and routing \href{http://en.wikipedia.org/wiki/FIX_protocol}{FIX} gateway server for financial trading, using C\# Mono.Net and Java.
+                \item[-] High level work on the reimplementation of an existing product, a multi protocol order multiplexing \href{http://en.wikipedia.org/wiki/FIX_protocol}{FIX} gateway server, using Mono .Net/C\#.
+                \item[-] Worked on research and development of financial trading application servers on Linux based platforms, designed to handle a large number of concurrent requests.
+	\end{achievements}
+%\newpage
+%--------------------------------------------------------EDUCATION----------------------------------------------------------
+\header{Education}
+\employer{\href{http://www.coventry.ac.uk}{Coventry University}}{Coventry, West Midlands, United Kingdom.}
+{M.Sc., Computer Science} { Sept 2007 - Nov 2008}
+	\begin{achievements}
+	        \item MSc Project: ``Evolution Of Trading Rules Using Genetic Programming''.
+                        An algorithm trading engine using genetic programming paradigms, implemented in Python.
+                         Extensively used OpenUp (Unified Process) to manage and document development process.
+	\end{achievements}
+        \vspace{03pt}
+\begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \multicolumn{2}{c}{\emph{Subject Modules}}\\
+        Masters Project & Distributed Software Development\\
+        Research Methods - 1:  Research Skills  & Software Process Management\\
+        Research Methods - 2:  Project Preparation & Legal Issues For Computing\\
+        Internet And Information Security & Ethical Hacking\\
+        Network Planning And Support & Software Design \\
+\end{tabular*}
+
+\employer{\href{http://www.nitte.ac.in/nmamit/}{NMAM Institute of Technology, VTU }} { Nitte, Karkala, Karnataka, India. }
+{B.E., Computer  Science. }{Aug 2001 - May 2005 }
+	\begin{achievements}
+		\item B.E Project: emailfs, a \href{http://en.wikipedia.org/wiki/Virtual_file_system}{virtual file system} kernel module providing file system abstraction to access an online mail box.
+                        Implemented in C using linux 2.6 kernel API.
+	\end{achievements}
+
+\employer{\href{http://www.stjosephscoonoor.com}{St Joseph's Boys Higher Secondary School}} { Coonoor, Nilgiris, Tamil Nadu, India.}
+{\href{http://en.wikipedia.org/wiki/Higher_Secondary_(School)_Certificate}{HSC (PCMB)}, \href{http://www.google.com/search?q=anglo+indian+school+leaving+certificate}{AISLC}. }{ 1995 - 2001  }
+
+%----------------------------------------ACHIEVEMENTS-----------------------------------------------------------
+%\vspace{-10pt}
+\header{Awards \& Achievements} 
+\begin{achievements}
+\item Best Computer Science Project Of The Year Award, NMAMIT, (2005). \\
+\item Member Of College Cultural Committee, NMAMIT, (2004). \\
+\item Visveswariah Technological University Basketball Team Member, (2004).\\
+\item State Level Football Team Member, (2000).\\
+\item House Captain in school, (2000).\\
+\item District Level Pole Vault, (1998).\\
+\end{achievements}
+
+%----------------------------------------ACTIVITIES and INTERESTS-----------------------------------------------------------
+\header{Activities \& Interests} 
+\begin{achievements}
+\item Running and Swimming \\
+\item Basket Ball and Football \\
+\item Science Fiction \\
+\item GNU/Linux Open Source Technologies \\
+\item Evolutionary Computing with special interest in Genetic Programming \\
+\end{achievements}
+
+%------------------------------------------REFERENCES-----------------------------------------------
+\header{References}
+\begin{description}
+\item
+	\begin{tabular*}{6in}{l@{\extracolsep{\fill}}r}
+	\textbf{Dr. A.M Khan} & Director \& Founder. \\
+	Pioneer FutureTech Health Care IT, & Mumbai, India.  \\
+	Contact information available on request. & \\
+	\end{tabular*}
+%\item
+%	\begin{tabular*}{6in}{l@{\extracolsep{\fill}}r}
+%	\textbf{Mr. Kirty Jain} & Senior Software Specialist. \\
+%	TickerPlant Ltd, & Mumbai, India.  \\
+%	Contact information available on request. & \\
+%	\end{tabular*}
+%\item
+%	\begin{tabular*}{6in}{l@{\extracolsep{\fill}}r}
+%	\textbf{Mr. Baishampayan Ghose} & Co-Founder \& Director of Engineering. \\
+%	InfinitelyBeta, & Pune, India.  \\
+%	Contact information available on request. & \\
+%	\end{tabular*}
+%\item
+%	\begin{tabular*}{6in}{l@{\extracolsep{\fill}}r}
+%	\textbf{Mr. Raymond Farmer} &  Associate Dean (Computing),Project Supervisor. \\
+%	Coventry University & Priory Street, Coventry \\
+%        West Midlands, & United Kingdom, CV1 5FB \\
+%	Contact information available on request. & \\
+%	\end{tabular*}
+\item
+	\begin{tabular*}{6in}{l@{\extracolsep{\fill}}r}
+	\textbf{Mr. Giridhar Nayak} & Project Manager. \\
+	Financial Technologies Ltd, & Suren Road, Chakala,  \\
+        Andheri, Mumbai, & India, 400093. \\
+	Contact information available on request. & \\
+	\end{tabular*}
+\end{description}
+\thispagestyle{empty}
+\end{document}
